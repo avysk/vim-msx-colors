@@ -5,7 +5,7 @@ hi! clear
 syntax reset
 
 let g:colors_name = "msx"
-let s:msx_vim_version="0.1.0"
+let s:msx_vim_version="0.2.0"
 set background=dark
 
 let s:color1 = "#000000" " black
