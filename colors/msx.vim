@@ -80,7 +80,7 @@ LINK Boolean Float
 LINK Boolean Number
 LINK Boolean String
 BG ColorColumn 5
-FG Comment 14
+FG Comment 10
 FG Conditional 3
 LINK Conditional Decorator
 LINK Conditional Function
