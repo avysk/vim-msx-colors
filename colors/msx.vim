@@ -138,9 +138,9 @@ FG SpellCap 10
 LINK SpellCap SpellLocal
 LINK SpellCap SpellRare
 COLOR TabLineSel 15 4
-COLOR Title 1 5
 BG VertSplit 1
 BG Visual 14
+COLOR Title 1 4
 LINK Visual VisualNOS
 COLOR WarningMsg 11 8
 COLOR WildMenu 4 11
