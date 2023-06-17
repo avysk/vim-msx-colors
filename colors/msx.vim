@@ -114,20 +114,20 @@ FG LineNr 14
 FG Keyword 15
 LINK LineNr FoldColumn
 LINK LineNr SignColumn
-FG MatchParen 15
+COLOR MatchParen 15 4
 FG NonText 14
 LINK NonText EndOfBuffer
+LINK NonText ModeMsg
+LINK NonText MoreMsg
+LINK NonText Question
+LINK NonText StatusLine
+LINK NonText StatusLineNC
+LINK NonText StatusLineTerm
+LINK NonText StatusLineTermNC
+LINK NonText TabLine
+LINK NonText TabLineFill
 COLOR Normal 11 4
 LINK Normal CursorLineNr
-LINK Normal ModeMsg
-LINK Normal MoreMsg
-LINK Normal Question
-LINK Normal StatusLine
-LINK Normal StatusLineNC
-LINK Normal StatusLineTerm
-LINK Normal StatusLineTermNC
-LINK Normal TabLine
-LINK Normal TabLineFill
 COLOR Pmenu 11 5
 BG PMenuSbar 5
 COLOR PmenuSel 15 5
