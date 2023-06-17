@@ -94,7 +94,7 @@ FG Define 14
 LINK Define Include
 LINK Define PreProc
 LINK Define StorageClass
-COLOR Cursor 15 4
+COLOR Cursor 15 10
 LINK Cursor lCursor
 BG CursorColumn 5
 LINK CursorColumn CursorLine
