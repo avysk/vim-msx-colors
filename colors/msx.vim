@@ -8,23 +8,23 @@ let g:colors_name = "msx"
 let s:msx_vim_version="0.1.0"
 set background=dark
 
-const s:color1 = "#000000" " black
-const s:color2 = "#3EB849" " medium green
-const s:color3 = "#74D07D" " light green
-const s:color4 = "#5955E0" " dark blue
-const s:color5 = "#8076F1" " light blue
-const s:color6 = "#B95E51" " dark red
-const s:color7 = "#65DBEF" " cyan
-const s:color8 = "#DB6559" " medium red
-const s:color9 = "#FF897D" " light red
-const s:color10 = "#CCC35E" " dark yellow
-const s:color11 = "#DED087" " light yellow
-const s:color12 = "#3AA241" " dark green
-const s:color13 = "#B766B5" " magenta
-const s:color14 = "#CCCCCC" " gray
-const s:color15 = "#FFFFFF" " white
+let s:color1 = "#000000" " black
+let s:color2 = "#3EB849" " medium green
+let s:color3 = "#74D07D" " light green
+let s:color4 = "#5955E0" " dark blue
+let s:color5 = "#8076F1" " light blue
+let s:color6 = "#B95E51" " dark red
+let s:color7 = "#65DBEF" " cyan
+let s:color8 = "#DB6559" " medium red
+let s:color9 = "#FF897D" " light red
+let s:color10 = "#CCC35E" " dark yellow
+let s:color11 = "#DED087" " light yellow
+let s:color12 = "#3AA241" " dark green
+let s:color13 = "#B766B5" " magenta
+let s:color14 = "#CCCCCC" " gray
+let s:color15 = "#FFFFFF" " white
 
-const g:msxcolors = {
+let g:msxcolors = {
 \  1: s:color1,
 \  2: s:color2,
 \  3: s:color3,
@@ -75,7 +75,7 @@ com -nargs=* LINK call s:linkNoAttributes(<f-args>)
 
 FG Boolean 7
 LINK Boolean Character
-LINK Boolean Constant
+LINK Boolean letant
 LINK Boolean Float
 LINK Boolean Number
 LINK Boolean String
