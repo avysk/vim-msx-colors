@@ -148,5 +148,5 @@ COLOR WildMenu 4 11
 let g:terminal_ansi_colors = [s:color1, s:color11, s:color14, s:color13, s:color9, s:color15, s:color8, s:color5, s:color3, s:color11, s:color14, s:color13, s:color9, s:color15, s:color7, s:color6]
 
 
-# Coc.nvim
+" Coc.nvim
 FG CocSearch 15
