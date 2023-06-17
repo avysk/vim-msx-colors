@@ -41,7 +41,7 @@ using it for gvim makes things more authentic.
 
 ## License
 
-The license is [BSD 2-Clause](LICENSE).
+The license is [BSD 2-Clause](LICENSE.md).
 
 ## Acknowledgements
 
