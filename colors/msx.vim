@@ -140,6 +140,7 @@ LINK SpellCap SpellRare
 COLOR TabLineSel 15 4
 COLOR Title 1 4
 BG VertSplit 10
+FG Underlined 3
 COLOR Visual 1 14
 LINK Visual VisualNOS
 COLOR WarningMsg 11 8
