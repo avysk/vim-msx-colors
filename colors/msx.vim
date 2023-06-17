@@ -132,6 +132,8 @@ COLOR Pmenu 11 5
 BG PMenuSbar 5
 COLOR PmenuSel 15 5
 BG PmenuThumb 13
+FG Special 2
+LINK Special SpecialChar
 FG SpecialKey 14
 FG SpellBad 9
 FG SpellCap 10
