@@ -153,3 +153,18 @@ let g:terminal_ansi_colors = [s:color1, s:color11, s:color14, s:color13, s:color
 
 " Coc.nvim
 FG CocSearch 15
+
+if exists(":RainbowToggleOff")
+  RainbowToggleOff
+  let g:rainbow_conf = exists("g:rainbow_conf") ? g:rainbow_conf : {}
+  let g:rainbow_conf["guifgs"] =
+        \ [
+        \ s:color11,
+        \ s:color1,
+        \ s:color3,
+        \ s:color9,
+        \ s:color13,
+        \ s:color15
+        \ ]
+  RainbowToggleOn
+endif
