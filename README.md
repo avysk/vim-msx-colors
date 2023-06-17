@@ -1,7 +1,7 @@
 # vim-msx-colors
 
 This is an MSX-like color scheme for graphical vim. If you wish, you can use
-MAX palette directly: the dictionary `g:msxcolors` maps color numbers to their
+MSX palette directly: the dictionary `g:msxcolors` maps color numbers to their
 hexadecimal values.
 
 ![Example](Example.png)
