@@ -6,7 +6,7 @@ syntax reset
 
 let g:colors_name = "msx"
 let s:msx_vim_version="0.3.0"
-set background=dark
+set background=light
 
 let s:color1 = "#000000" " black
 let s:color2 = "#3EB849" " medium green
@@ -128,6 +128,7 @@ LINK NonText TabLine
 LINK NonText TabLineFill
 COLOR Normal 11 4
 LINK Normal CursorLineNr
+LINK Normal Terminal
 COLOR Pmenu 11 5
 BG PMenuSbar 5
 COLOR PmenuSel 15 5
@@ -149,7 +150,7 @@ COLOR WarningMsg 11 8
 COLOR WildMenu 4 11
 
 let g:terminal_ansi_colors = [
-      \ s:color4,
+      \ s:color1,
       \ s:color8,
       \ s:color2,
       \ s:color6,
