@@ -5,7 +5,7 @@ hi! clear
 syntax reset
 
 let g:colors_name = "msx"
-let s:msx_vim_version="0.2.0"
+let s:msx_vim_version="0.3.0"
 set background=dark
 
 let s:color1 = "#000000" " black
@@ -148,7 +148,24 @@ LINK Visual VisualNOS
 COLOR WarningMsg 11 8
 COLOR WildMenu 4 11
 
-let g:terminal_ansi_colors = [s:color1, s:color11, s:color14, s:color13, s:color9, s:color15, s:color8, s:color5, s:color3, s:color11, s:color14, s:color13, s:color9, s:color15, s:color7, s:color6]
+let g:terminal_ansi_colors = [
+      \ s:color4, " black,
+      \ s:color8, " dark red
+      \ s:color2, " dark green
+      \ s:color6, " brown
+      \ s:color5, " dark blue
+      \ s:color13, " dark magenta
+      \ s:color7, " dark cyan
+      \ s:color14, " light grep
+      \ s:color14, " dark grey -- duplicated
+      \ s:color9, " red
+      \ s:color3, " green
+      \ s:color10, " yellow
+      \ s:color5, " blue -- duplicated
+      \ s:color13, " magenta -- duplicated
+      \ s:color7, " cyan -- duplicated
+      \ s:color15 " white
+      \ ]
 
 
 " Coc.nvim
