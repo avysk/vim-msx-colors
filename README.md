@@ -24,7 +24,7 @@ The vim-plug incantation to put in your `vimrc` file is
 
 ## Recommendation
 
-For more MSX-like experience find online `MSX Screen 0.ttf` font and use it.
+For more MSX-like experience find online `MSX Screen 0.ttf` font and use it (see below for one possible source).
 You can also define shortcuts for F-keys and list them in statusline. See
 `:h stl`. If your window manager allows switching windows to fullscreen mode,
 using it for gvim makes things more authentic.
@@ -49,3 +49,5 @@ The license is [MIT](LICENSE).
 ## Acknowledgements
 
 The palette colors are taken from [this page](https://paulwratt.github.io/programmers-palettes/HW-MSX/HW-MSX-palettes.html).
+
+I use the font from [here](http://www.ateijelo.com/blog/2016/09/13/making-an-msx-font).
