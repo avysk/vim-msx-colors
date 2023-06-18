@@ -1,10 +1,1 @@
----
-name: Custom issue template
-about: Describe this issue template's purpose here.
-title: ''
-labels: ''
-assignees: ''
-
----
-
-
+Specify the version of colorscheme you are using. Free-form otherwise.
