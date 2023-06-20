@@ -129,9 +129,9 @@ LINK NonText TabLineFill
 COLOR Normal 11 4
 LINK Normal CursorLineNr
 LINK Normal Terminal
-COLOR Pmenu 11 4
+COLOR Pmenu 11 5
 BG PMenuSbar 5
-FG PmenuSel 15
+COLOR PmenuSel 15 12
 BG PmenuThumb 13
 FG Special 2
 LINK Special SpecialChar
