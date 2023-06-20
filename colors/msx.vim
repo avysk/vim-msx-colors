@@ -161,7 +161,8 @@ com! -nargs=* ONBLUE call <SNR>OnBlue(<f-args>)
 ONBLUE MsxBlack 1
 ONBLUE MsxMGreen 2
 ONBLUE MsxLGreen 3
-ONBLUE MsxDBlue 4 " Invisible
+ " Dark blue on dark blue => invisible
+ONBLUE MsxDBlue 4
 ONBLUE MsxLBlue 5
 ONBLUE MsxDRed 6
 ONBLUE MsxCyan 7
