@@ -5,7 +5,7 @@ hi! clear
 syntax reset
 
 let g:colors_name = "msx"
-let s:msx_vim_version="0.3.0"
+let s:msx_vim_version="0.4.0"
 set background=light
 
 let s:color1 = "#000000" " black
@@ -129,9 +129,9 @@ LINK NonText TabLineFill
 COLOR Normal 11 4
 LINK Normal CursorLineNr
 LINK Normal Terminal
-COLOR Pmenu 11 5
+COLOR Pmenu 11 4
 BG PMenuSbar 5
-COLOR PmenuSel 15 5
+FG PmenuSel 15
 BG PmenuThumb 13
 FG Special 2
 LINK Special SpecialChar
