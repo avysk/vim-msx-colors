@@ -42,36 +42,36 @@ let g:msxcolors = {
 \  15: s:color15,
 \  }
 
-function! MSXColor(elt, fg, bg)
+function! <SNR>MSXColor(elt, fg, bg)
   let fgc = "guifg=" .. g:msxcolors[a:fg]
   let bgc = "guibg=" .. g:msxcolors[a:bg]
   let cmd = "hi! " .. a:elt .. " gui=NONE " .. fgc .. " " .. bgc
   silent execute cmd
 endfunction
 
-function! MSXBackground(elt, bg)
+function! <SNR>MSXBackground(elt, bg)
   let bgc = "guibg=" .. g:msxcolors[a:bg]
   let cmd = "hi! " .. a:elt .. " gui=NONE " .. bgc
   silent execute cmd
 endfunction
 
-function! MSXForeground(elt, fg)
+function! <SNR>MSXForeground(elt, fg)
   let fgc = "guifg=" .. g:msxcolors[a:fg]
   let cmd = "hi! " .. a:elt .. " gui=NONE " .. fgc
   silent execute cmd
 endfunction
 
-function! s:linkNoAttributes(from_g, to_g)
+function! <SNR>linkNoAttributes(from_g, to_g)
   let cmd = "hi! " .. a:to_g .. " gui=NONE"
   silent execute cmd
   let cmd = "hi! link " .. a:to_g .. " " .. a:from_g
   silent execute cmd
 endfunction
 
-com! -nargs=* COLOR call MSXColor(<f-args>)
-com! -nargs=* BG call MSXBackground(<f-args>)
-com! -nargs=* FG call MSXForeground(<f-args>)
-com! -nargs=* LINK call s:linkNoAttributes(<f-args>)
+com! -nargs=* COLOR call <SNR>MSXColor(<f-args>)
+com! -nargs=* BG call <SNR>MSXBackground(<f-args>)
+com! -nargs=* FG call <SNR>MSXForeground(<f-args>)
+com! -nargs=* LINK call <SNR>linkNoAttributes(<f-args>)
 
 FG Boolean 7
 LINK Boolean Character
