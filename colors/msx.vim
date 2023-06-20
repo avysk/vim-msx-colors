@@ -151,7 +151,7 @@ COLOR WildMenu 4 11
 
 " Palette on blue background
 function! <SNR>OnBlue(name, fg)
-  let fgc = " guifg" .. g:msxcolors[a:fg]
+  let fgc = " guifg=" .. g:msxcolors[a:fg]
   let cmd = "hi! " .. a:name .. " guibg=" .. s:color4 .. fgc
   silent execute cmd
 endfunction
