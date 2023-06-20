@@ -149,6 +149,31 @@ LINK Visual VisualNOS
 COLOR WarningMsg 11 8
 COLOR WildMenu 4 11
 
+" Palette on blue background
+function! <SNR>OnBlue(name, fg)
+  let fgc = " guifg" .. g:msxcolors[a:fg]
+  let cmd = "hi! " .. a:name .. " guibg=" .. s:color4 .. fgc
+  silent execute cmd
+endfunction
+
+com! -nargs=* ONBLUE call <SNR>OnBlue(<f-args>)
+
+ONBLUE MsxBlack 1
+ONBLUE MsxMGreen 2
+ONBLUE MsxLGreen 3
+ONBLUE MsxDBlue 4 " Invisible
+ONBLUE MsxLBlue 5
+ONBLUE MsxDRed 6
+ONBLUE MsxCyan 7
+ONBLUE MsxMRed 8
+ONBLUE MsxLRed 9
+ONBLUE MsxDYellow 10
+ONBLUE MsxLYellow 11
+ONBLUE MsxDGReen 12
+ONBLUE MsxMagenta 13
+ONBLUE MsxGray 14
+ONBLUE MsxWhite 15
+
 let g:terminal_ansi_colors = [
       \ s:color1,
       \ s:color8,
