@@ -94,15 +94,15 @@ FG Define 14
 LINK Define Include
 LINK Define PreProc
 LINK Define StorageClass
-COLOR Cursor 15 10
+COLOR Cursor 11 10
 LINK Cursor lCursor
 BG CursorColumn 5
 LINK CursorColumn CursorLine
 FG Delimiter 10
 LINK Delimiter Operator
 LINK Delimiter Tag
-FG Directory 15
-COLOR Error 15 8
+FG Directory 11
+COLOR Error 11 8
 LINK Error ErrorMsg
 LINK Error Todo
 FG Exception 9
@@ -111,10 +111,10 @@ COLOR Folded 10 5
 BG IncSearch 2
 LINK IncSearch Search
 FG LineNr 14
-FG Keyword 15
+FG Keyword 11
 LINK LineNr FoldColumn
 LINK LineNr SignColumn
-COLOR MatchParen 15 4
+COLOR MatchParen 11 4
 FG NonText 14
 LINK NonText EndOfBuffer
 LINK NonText ModeMsg
@@ -126,12 +126,12 @@ LINK NonText StatusLineTerm
 LINK NonText StatusLineTermNC
 LINK NonText TabLine
 LINK NonText TabLineFill
-COLOR Normal 11 4
+COLOR Normal 15 4
 LINK Normal CursorLineNr
 LINK Normal Terminal
-COLOR Pmenu 11 5
+COLOR Pmenu 15 5
 BG PMenuSbar 5
-COLOR PmenuSel 15 12
+COLOR PmenuSel 11 12
 BG PmenuThumb 13
 FG Special 2
 LINK Special SpecialChar
@@ -140,14 +140,14 @@ FG SpellBad 9
 FG SpellCap 10
 LINK SpellCap SpellLocal
 LINK SpellCap SpellRare
-COLOR TabLineSel 15 4
+COLOR TabLineSel 11 4
 COLOR Title 1 4
 BG VertSplit 10
 FG Underlined 3
 COLOR Visual 1 14
 LINK Visual VisualNOS
-COLOR WarningMsg 11 8
-COLOR WildMenu 4 11
+COLOR WarningMsg 15 8
+COLOR WildMenu 4 15
 
 " Palette on blue background
 function! <SNR>OnBlue(name, fg)
@@ -196,7 +196,7 @@ let g:terminal_ansi_colors = [
 
 
 " Coc.nvim
-FG CocSearch 15
+FG CocSearch 11
 
 if exists(":RainbowToggleOff")
   RainbowToggleOff
