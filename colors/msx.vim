@@ -147,7 +147,7 @@ FG Underlined 3
 COLOR Visual 1 14
 LINK Visual VisualNOS
 COLOR WarningMsg 15 8
-COLOR WildMenu 4 15
+COLOR WildMenu 15 4
 
 " Palette on blue background
 function! <SNR>OnBlue(name, fg)
