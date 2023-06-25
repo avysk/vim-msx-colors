@@ -5,7 +5,7 @@ hi! clear
 syntax reset
 
 let g:colors_name = "msx"
-let s:msx_vim_version="0.5.0"
+let s:msx_vim_version="0.6.0"
 set background=light
 
 let s:color1 = "#000000" " black
@@ -90,7 +90,8 @@ LINK Conditional Statement
 LINK Conditional Structure
 LINK Conditional Type
 LINK Conditional Typedef
-FG Define 14
+FG Define 11
+hi! Define gui=bold
 LINK Define Include
 LINK Define PreProc
 LINK Define StorageClass

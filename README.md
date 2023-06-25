@@ -37,7 +37,6 @@ using it for gvim makes things more authentic.
 - Not even all 15 colors are used. Most commonly used are color 11 (light
   yellow for normal text foreground), color 4 (dark blue for background), color
   14 (grey) and color 15 (white).
-- Attributes (bold, underlined, reverse, etc.) are not used.
 - If you have rainbow parentheses plugin, supporting `ToggleRainbowOff`
   command, then `ToggleRainbowOn` will be automatically executed when
   colorscheme is loaded.
