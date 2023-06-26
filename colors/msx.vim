@@ -90,6 +90,8 @@ LINK Conditional Statement
 LINK Conditional Structure
 LINK Conditional Type
 LINK Conditional Typedef
+FG debugBreakpoint 9
+BG debugPC 5
 FG Define 11
 hi! Define gui=bold
 LINK Define Include
