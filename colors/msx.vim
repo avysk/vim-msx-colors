@@ -1,6 +1,9 @@
 " Copyright (c) 2023-present Alexey Vyskubov <alexey@ocaml.nl>
 " This source code is licensed under the 2-clauso BSD license found in the license file.
 
+hi! clear
+syntax reset
+
 let g:colors_name = "msx"
 let s:msx_vim_version="0.8.0"
 set background=light
