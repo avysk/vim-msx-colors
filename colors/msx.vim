@@ -2,7 +2,7 @@
 " This source code is licensed under the 2-clauso BSD license found in the license file.
 
 let g:colors_name = "msx"
-let s:msx_vim_version="0.7.0"
+let s:msx_vim_version="0.8.0"
 set background=light
 
 let s:color1 = "#000000" " black
@@ -39,36 +39,36 @@ let g:msxcolors = {
 \  15: s:color15,
 \  }
 
-function! <SNR>MSXColor(elt, fg, bg)
+function! <SID>MSXColor(elt, fg, bg)
   let fgc = "guifg=" .. g:msxcolors[a:fg]
   let bgc = "guibg=" .. g:msxcolors[a:bg]
   let cmd = "hi! " .. a:elt .. " gui=NONE " .. fgc .. " " .. bgc
   silent execute cmd
 endfunction
 
-function! <SNR>MSXBackground(elt, bg)
+function! <SID>MSXBackground(elt, bg)
   let bgc = "guibg=" .. g:msxcolors[a:bg]
   let cmd = "hi! " .. a:elt .. " gui=NONE " .. bgc
   silent execute cmd
 endfunction
 
-function! <SNR>MSXForeground(elt, fg)
+function! <SID>MSXForeground(elt, fg)
   let fgc = "guifg=" .. g:msxcolors[a:fg]
   let cmd = "hi! " .. a:elt .. " gui=NONE " .. fgc
   silent execute cmd
 endfunction
 
-function! <SNR>linkNoAttributes(from_g, to_g)
+function! <SID>linkNoAttributes(from_g, to_g)
   let cmd = "hi! " .. a:to_g .. " gui=NONE"
   silent execute cmd
   let cmd = "hi! link " .. a:to_g .. " " .. a:from_g
   silent execute cmd
 endfunction
 
-com! -nargs=* COLOR call <SNR>MSXColor(<f-args>)
-com! -nargs=* BG call <SNR>MSXBackground(<f-args>)
-com! -nargs=* FG call <SNR>MSXForeground(<f-args>)
-com! -nargs=* LINK call <SNR>linkNoAttributes(<f-args>)
+com! -nargs=* COLOR call <SID>MSXColor(<f-args>)
+com! -nargs=* BG call <SID>MSXBackground(<f-args>)
+com! -nargs=* FG call <SID>MSXForeground(<f-args>)
+com! -nargs=* LINK call <SID>linkNoAttributes(<f-args>)
 
 FG Boolean 7
 LINK Boolean Character
@@ -152,13 +152,13 @@ COLOR WarningMsg 15 8
 COLOR WildMenu 15 4
 
 " Palette on blue background
-function! <SNR>OnBlue(name, fg)
+function! <SID>OnBlue(name, fg)
   let fgc = " guifg=" .. g:msxcolors[a:fg]
   let cmd = "hi! " .. a:name .. " guibg=" .. s:color4 .. fgc
   silent execute cmd
 endfunction
 
-com! -nargs=* ONBLUE call <SNR>OnBlue(<f-args>)
+com! -nargs=* ONBLUE call <SID>OnBlue(<f-args>)
 
 ONBLUE MsxBlack 1
 ONBLUE MsxMGreen 2
