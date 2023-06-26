@@ -5,7 +5,7 @@ hi! clear
 syntax reset
 
 let g:colors_name = "msx"
-let s:msx_vim_version="0.6.0"
+let s:msx_vim_version="0.7.0"
 set background=light
 
 let s:color1 = "#000000" " black
@@ -102,6 +102,10 @@ LINK CursorColumn CursorLine
 FG Delimiter 10
 LINK Delimiter Operator
 LINK Delimiter Tag
+BG DiffAdd 12
+BG DiffChange 4
+BG DiffDelete 6
+BG DiffText 5
 FG Directory 11
 COLOR Error 11 8
 LINK Error ErrorMsg
