@@ -115,7 +115,7 @@ LINK Error Todo
 FG Exception 9
 LINK Exception Label
 COLOR Folded 10 5
-BG IncSearch 2
+COLOR IncSearch 2 15
 LINK IncSearch Search
 FG LineNr 14
 FG Keyword 11
