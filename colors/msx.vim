@@ -5,8 +5,8 @@ hi! clear
 syntax reset
 
 let g:colors_name = "msx"
-let s:msx_vim_version="0.2.0"
-set background=dark
+let s:msx_vim_version="0.9.0"
+set background=light
 
 let s:color1 = "#000000" " black
 let s:color2 = "#3EB849" " medium green
@@ -42,36 +42,36 @@ let g:msxcolors = {
 \  15: s:color15,
 \  }
 
-function! MSXColor(elt, fg, bg)
+function! <SID>MSXColor(elt, fg, bg)
   let fgc = "guifg=" .. g:msxcolors[a:fg]
   let bgc = "guibg=" .. g:msxcolors[a:bg]
   let cmd = "hi! " .. a:elt .. " gui=NONE " .. fgc .. " " .. bgc
   silent execute cmd
 endfunction
 
-function! MSXBackground(elt, bg)
+function! <SID>MSXBackground(elt, bg)
   let bgc = "guibg=" .. g:msxcolors[a:bg]
   let cmd = "hi! " .. a:elt .. " gui=NONE " .. bgc
   silent execute cmd
 endfunction
 
-function! MSXForeground(elt, fg)
+function! <SID>MSXForeground(elt, fg)
   let fgc = "guifg=" .. g:msxcolors[a:fg]
   let cmd = "hi! " .. a:elt .. " gui=NONE " .. fgc
   silent execute cmd
 endfunction
 
-function! s:linkNoAttributes(from_g, to_g)
+function! <SID>linkNoAttributes(from_g, to_g)
   let cmd = "hi! " .. a:to_g .. " gui=NONE"
   silent execute cmd
   let cmd = "hi! link " .. a:to_g .. " " .. a:from_g
   silent execute cmd
 endfunction
 
-com! -nargs=* COLOR call MSXColor(<f-args>)
-com! -nargs=* BG call MSXBackground(<f-args>)
-com! -nargs=* FG call MSXForeground(<f-args>)
-com! -nargs=* LINK call s:linkNoAttributes(<f-args>)
+com! -nargs=* COLOR call <SID>MSXColor(<f-args>)
+com! -nargs=* BG call <SID>MSXBackground(<f-args>)
+com! -nargs=* FG call <SID>MSXForeground(<f-args>)
+com! -nargs=* LINK call <SID>linkNoAttributes(<f-args>)
 
 FG Boolean 7
 LINK Boolean Character
@@ -92,31 +92,38 @@ LINK Conditional Type
 LINK Conditional Typedef
 BG Cursor 14
 BG lCursor 14
-FG Define 14
+FG debugBreakpoint 9
+BG debugPC 5
+FG Define 11
+hi! Define gui=bold
 LINK Define Include
 LINK Define PreProc
 LINK Define StorageClass
-COLOR Cursor 15 10
+COLOR Cursor 11 10
 LINK Cursor lCursor
 BG CursorColumn 5
 LINK CursorColumn CursorLine
 FG Delimiter 10
 LINK Delimiter Operator
 LINK Delimiter Tag
-FG Directory 15
-COLOR Error 15 8
+BG DiffAdd 12
+BG DiffChange 4
+BG DiffDelete 6
+BG DiffText 5
+FG Directory 11
+COLOR Error 11 8
 LINK Error ErrorMsg
 LINK Error Todo
 FG Exception 9
 LINK Exception Label
 COLOR Folded 10 5
-BG IncSearch 2
+COLOR IncSearch 2 15
 LINK IncSearch Search
 FG LineNr 14
-FG Keyword 15
+FG Keyword 11
 LINK LineNr FoldColumn
 LINK LineNr SignColumn
-COLOR MatchParen 15 4
+COLOR MatchParen 11 4
 FG NonText 14
 LINK NonText EndOfBuffer
 LINK NonText ModeMsg
@@ -128,11 +135,12 @@ LINK NonText StatusLineTerm
 LINK NonText StatusLineTermNC
 LINK NonText TabLine
 LINK NonText TabLineFill
-COLOR Normal 11 4
+COLOR Normal 15 4
 LINK Normal CursorLineNr
-COLOR Pmenu 11 5
+LINK Normal Terminal
+COLOR Pmenu 15 5
 BG PMenuSbar 5
-COLOR PmenuSel 15 5
+COLOR PmenuSel 11 12
 BG PmenuThumb 13
 FG Special 2
 LINK Special SpecialChar
@@ -141,20 +149,63 @@ FG SpellBad 9
 FG SpellCap 10
 LINK SpellCap SpellLocal
 LINK SpellCap SpellRare
-COLOR TabLineSel 15 4
+COLOR TabLineSel 11 4
 COLOR Title 1 4
 BG VertSplit 10
 FG Underlined 3
 COLOR Visual 1 14
 LINK Visual VisualNOS
-COLOR WarningMsg 11 8
-COLOR WildMenu 4 11
+COLOR WarningMsg 15 8
+COLOR WildMenu 15 4
 
-let g:terminal_ansi_colors = [s:color1, s:color11, s:color14, s:color13, s:color9, s:color15, s:color8, s:color5, s:color3, s:color11, s:color14, s:color13, s:color9, s:color15, s:color7, s:color6]
+" Palette on blue background
+function! <SID>OnBlue(name, fg)
+  let fgc = " guifg=" .. g:msxcolors[a:fg]
+  let cmd = "hi! " .. a:name .. " guibg=" .. s:color4 .. fgc
+  silent execute cmd
+endfunction
+
+com! -nargs=* ONBLUE call <SID>OnBlue(<f-args>)
+
+ONBLUE MsxBlack 1
+ONBLUE MsxMGreen 2
+ONBLUE MsxLGreen 3
+ " Dark blue on dark blue => invisible
+ONBLUE MsxDBlue 4
+ONBLUE MsxLBlue 5
+ONBLUE MsxDRed 6
+ONBLUE MsxCyan 7
+ONBLUE MsxMRed 8
+ONBLUE MsxLRed 9
+ONBLUE MsxDYellow 10
+ONBLUE MsxLYellow 11
+ONBLUE MsxDGReen 12
+ONBLUE MsxMagenta 13
+ONBLUE MsxGray 14
+ONBLUE MsxWhite 15
+
+let g:terminal_ansi_colors = [
+      \ s:color1,
+      \ s:color8,
+      \ s:color2,
+      \ s:color6,
+      \ s:color5,
+      \ s:color13,
+      \ s:color7,
+      \ s:color14,
+      \ s:color14,
+      \ s:color9,
+      \ s:color3,
+      \ s:color10,
+      \ s:color5,
+      \ s:color13,
+      \ s:color7,
+      \ s:color15
+      \ ]
 
 
 " Coc.nvim
-FG CocSearch 15
+FG CocSearch 11
 
 if exists(":RainbowToggleOff")
   RainbowToggleOff
