@@ -5,7 +5,7 @@ hi! clear
 syntax reset
 
 let g:colors_name = "msx"
-let s:msx_vim_version="0.9.0"
+let s:msx_vim_version="0.10.0"
 set background=light
 
 let s:color1 = "#000000" " black
@@ -92,6 +92,8 @@ LINK Conditional Type
 LINK Conditional Typedef
 BG Cursor 14
 BG lCursor 14
+BG CursorColumn 5
+LINK CursorColumn CursorLine
 FG debugBreakpoint 9
 BG debugPC 5
 FG Define 11
@@ -99,10 +101,6 @@ hi! Define gui=bold
 LINK Define Include
 LINK Define PreProc
 LINK Define StorageClass
-COLOR Cursor 11 10
-LINK Cursor lCursor
-BG CursorColumn 5
-LINK CursorColumn CursorLine
 FG Delimiter 10
 LINK Delimiter Operator
 LINK Delimiter Tag
