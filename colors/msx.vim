@@ -90,6 +90,8 @@ LINK Conditional Statement
 LINK Conditional Structure
 LINK Conditional Type
 LINK Conditional Typedef
+BG Cursor 14
+BG lCursor 14
 FG Define 14
 LINK Define Include
 LINK Define PreProc
